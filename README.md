@@ -1,59 +1,104 @@
-# AngularStorefront
+# Angular Storefront (Work in Progress)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.3.
+**Project Description**
 
-## Development server
+`Angular Storefront` is a sample e-commerce front-end application built with Angular. It demonstrates key concepts such as component-based architecture, routing, state management, and integration with external services.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
+## Current Status
+
+> **Work in Progress**
+>
+> * Application skeleton and core modules are implemented.
+> * Basic product listing and detail pages are functional.
+> * Shopping cart features and guard-based authentication flow (stub) exist.
+
+---
+
+##  Project Structure
+
+```
+src/app/
+├── core/
+│   ├── services/
+│   │   ├── auth.service.ts
+│   │   ├── cart.service.ts
+│   │   └── payment.service.ts
+│   └── guards/
+│       └── auth.guard.ts
+├── shared/
+│   ├── components/
+│   │   ├── header/
+│   │   ├── footer/
+│   │   ├── loading-spinner/
+│   │   └── product-card/
+│   └── pipes/
+├── features/
+│   ├── products/
+│   │   ├── components/
+│   │   │   ├── product-list/
+│   │   │   ├── product-detail/
+│   │   │   └── product-filter/
+│   │   └── services/
+│   │       └── product.service.ts
+│   ├── cart/
+│   │   ├── components/
+│   │   │   ├── shopping-cart/
+│   │   │   └── checkout/
+│   │   └── services/
+│   └── user/
+│       ├── components/
+│       │   ├── login/
+│       │   ├── register/
+│       │   └── profile/
+│       └── services/
+├── app.component.ts
+├── app.config.ts
+├── app.routes.ts
+└── main.ts
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## Implemented Features
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+* Core layout with header, footer, and responsive container
+* Product listing page with filter component
+* Product detail view
+* Shopping cart service and components
+* Stubbed authentication guard and service
+* Basic routing setup
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Upcoming Features
 
-```bash
-ng generate --help
-```
+* **Responsive Web Design (RWD):** Ensure the application adapts to mobile, tablet, and desktop viewports.
+* **Firebase Authentication:** Integrate Firebase Auth for user sign-up, login, and session management.
+* **Stripe Integration:** Setup Stripe for secure payment processing via `ngx-stripe`.
+* **Consistent Login Status:** Fix inconsistencies in login state across page refreshes and navigation.
+* **Unit & E2E Testing:** Add comprehensive tests using Jasmine/Karma and Cypress.
 
-## Building
+---
 
-To build the project run:
+## Installation & Development
 
-```bash
-ng build
-```
+1. Clone the repository:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+   ```bash
+   git clone https://github.com/wep-anonymous/Angular-Storefront.git
+   ```
+2. Install dependencies:
 
-## Running unit tests
+   ```bash
+   npm install
+   ```
+3. Start the development server:
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+   ```bash
+   ng serve
+   ```
+4. Open your browser at `http://localhost:4200`
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
